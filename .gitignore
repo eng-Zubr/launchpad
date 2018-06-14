@@ -12,3 +12,5 @@ apply*.log
 
 # IDE/Editor data
 .idea/
+
+node_modules
