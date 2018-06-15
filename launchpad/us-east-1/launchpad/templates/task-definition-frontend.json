@@ -1,0 +1,32 @@
+[
+  {
+    "cpu": 0,
+    "essential": true,
+    "privileged": false,
+    "image": "${image_url}",
+    "memoryReservation": 64,
+    "memory": 512,
+    "name": "${container_name}",
+    "portMappings": [
+      {
+        "containerPort": 3000,
+        "hostPort": 0
+      }
+    ],
+    "environment" : [
+        { "name" : "ENV", "value" : "${ENV}" },
+        { "name" : "HOST", "value" : "0.0.0.0" },
+        { "name" : "DANGEROUSLY_DISABLE_HOST_CHECK", "value" : "true" },
+        { "name" : "NODE_ENV", "value" : "production" },
+        { "name" : "PUBLIC_URL", "value" : "app.be34.me" }
+    ],
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+            "awslogs-group": "${log_group_name}",
+            "awslogs-region": "${log_group_region}",
+            "awslogs-stream-prefix": "${container_name}"
+        }
+    }
+  }
+]
