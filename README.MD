@@ -1,8 +1,8 @@
-##What is it, anyhow?##
+# What is it, anyhow?
 
 Just sample Terraform configuration that's creates sample Infrastructure for typical web application with separate VPC, AWS ECS, and all underlying Infra.
 
-##How to deploy?##
+# How to deploy?
 
 Install AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/installing.html
 
